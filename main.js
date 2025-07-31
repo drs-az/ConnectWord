@@ -1,18 +1,4002 @@
 const levels = [
   {
     groups: [
-      {category: 'Animals', words: ['lion', 'tiger', 'bear']},
-      {category: 'Colors', words: ['red', 'blue', 'green']},
-      {category: 'Fruits', words: ['apple', 'banana', 'pear']},
-      {category: 'Planets', words: ['mars', 'venus', 'saturn']}
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
     ]
   },
   {
     groups: [
-      {category: 'Shapes', words: ['circle', 'square', 'triangle']},
-      {category: 'Seasons', words: ['spring', 'summer', 'winter']},
-      {category: 'Instruments', words: ['guitar', 'piano', 'drums']},
-      {category: 'Sports', words: ['soccer', 'tennis', 'golf']}
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]},
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Types of Poetry', words: ["haiku", "sonnet", "limerick"]},
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Elements on the Periodic Table', words: ["oxygen", "carbon", "helium"]},
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Maas - Courts of Prythian', words: ["nightcourt", "daycourt", "wintercourt"]},
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Yarros - Riders Quadrant', words: ["violet", "xaden", "tairn"]},
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Philosophical Movements', words: ["stoicism", "existentialism", "nihilism"]},
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Sat Vocabulary Words', words: ["aberration", "cacophony", "deleterious"]},
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Kingdoms', words: ["westeros", "eleria", "panem"]},
+      {category: 'Synonyms for “Happy”', words: ["joyful", "elated", "content"]},
+      {category: 'Norse Mythology', words: ["odin", "thor", "loki"]},
+      {category: 'Architectural Styles', words: ["gothic", "baroque", "brutalist"]}
     ]
   }
 ];
