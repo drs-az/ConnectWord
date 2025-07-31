@@ -23,6 +23,11 @@ header {
   font-weight: bold;
 }
 
+#score {
+  margin-top: 0.5em;
+  font-size: 1.2em;
+}
+
 #word-grid {
   margin: 1em auto;
   display: grid;
