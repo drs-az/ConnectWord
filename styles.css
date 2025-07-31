@@ -3,12 +3,19 @@ body {
   text-align: center;
   margin: 0;
   padding: 0;
+  background: #fafafa;
+  color: #333;
 }
 
 header {
   background: #3f51b5;
   color: white;
   padding: 1em;
+}
+
+#score {
+  margin-top: 0.5em;
+  font-size: 1.2em;
 }
 
 #word-grid {
@@ -19,25 +26,32 @@ header {
   max-width: 600px;
 }
 
+#grid-container {
+  padding: 0 1em;
+}
+
 #message {
   margin-top: 1em;
   font-weight: bold;
+  color: #2e7d32;
 }
 
 .word-btn {
   padding: 0.5em;
   border: 1px solid #3f51b5;
   border-radius: 4px;
-  background: #f5f5f5;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
   cursor: pointer;
+  transition: background 0.3s;
 }
 
 .word-btn.selected {
-  background: #cfe2ff;
+  background: #bbdefb;
 }
 
 .word-btn.solved {
-  background: #c8e6c9;
+  background: #dcedc8;
   cursor: default;
 }
 

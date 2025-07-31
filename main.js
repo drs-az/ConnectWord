@@ -4005,6 +4005,7 @@ let selected = [];
 let allGroups = [];
 let visibleGroups = [];
 let currentGroupIndex = 0;
+let score = 0;
 
 function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -4054,6 +4055,8 @@ function checkSelection() {
   for (let i = 0; i < visibleGroups.length; i++) {
     const group = visibleGroups[i];
     if (group.words.every(w => selectionSet.has(w))) {
+      score++;
+      updateScore();
       showMessage(`Correct, ${group.category}`);
       visibleGroups.splice(i, 1);
       if (currentGroupIndex < allGroups.length) {
@@ -4076,6 +4079,10 @@ function clearSelection() {
   selected = [];
 }
 
+function updateScore() {
+  document.getElementById('score').textContent = `Score: ${score}`;
+}
+
 function showMessage(msg) {
   document.getElementById('message').textContent = msg;
 }
@@ -4086,6 +4093,9 @@ function init() {
   visibleGroups = allGroups.slice(0, 4);
   currentGroupIndex = 4;
   document.getElementById('next-level').style.display = 'none';
+  score = 0;
+  updateScore();
+  showMessage('');
   renderBoard();
 }
 
