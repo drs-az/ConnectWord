@@ -17,7 +17,7 @@ const levels = [
   }
 ];
 
-let levelIndex
+let levelIndex = 0;
 let selected = [];
 let solvedCategories = new Set();
 
@@ -103,9 +103,12 @@ function markSolved(words) {
   }
 }
 
-document.getElementById('next-level').addEventListener('click', () => {
-  levelIndex = (levelIndex + 1) % levels.length;
+function init() {
+  document.getElementById('next-level').addEventListener('click', () => {
+    levelIndex = (levelIndex + 1) % levels.length;
+    renderLevel();
+  });
   renderLevel();
-});
+}
 
-renderLevel();
+window.addEventListener('DOMContentLoaded', init);
