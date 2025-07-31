@@ -71,6 +71,11 @@ header {
   cursor: default;
 }
 
+.word-btn.hinted {
+  background: #bbdefb;
+  opacity: 0.6;
+}
+
 #next-level {
   margin: 1em;
   padding: 0.5em 1em;

@@ -1440,6 +1440,9 @@ function selectWord(btn) {
     btn.classList.remove('selected');
     selected = selected.filter(w => w !== word);
   } else {
+    if (btn.classList.contains('hinted')) {
+      btn.classList.remove('hinted');
+    }
     btn.classList.add('selected');
     selected.push(word);
     checkSelection();
@@ -1473,8 +1476,9 @@ function checkSelection() {
 
 function clearSelection() {
   const grid = document.getElementById('word-grid');
-  for (const btn of grid.querySelectorAll('.selected')) {
+  for (const btn of grid.querySelectorAll('.selected, .hinted')) {
     btn.classList.remove('selected');
+    btn.classList.remove('hinted');
   }
   selected = [];
 }
@@ -1503,14 +1507,14 @@ function init() {
 function useHint() {
   if (selected.length === 0) return;
   const grid = document.getElementById('word-grid');
+  grid.querySelectorAll('.hinted').forEach(b => b.classList.remove('hinted'));
+
   for (const group of visibleGroups) {
     if (selected.every(w => group.words.includes(w)) && selected.length < group.words.length) {
       const nextWord = group.words.find(w => !selected.includes(w));
       const btn = Array.from(grid.children).find(b => b.textContent === nextWord);
       if (btn && !btn.classList.contains('selected')) {
-        btn.classList.add('selected');
-        selected.push(nextWord);
-        checkSelection();
+        btn.classList.add('hinted');
       }
       break;
     }
