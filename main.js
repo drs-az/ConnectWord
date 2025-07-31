@@ -4057,13 +4057,13 @@ function checkSelection() {
     if (group.words.every(w => selectionSet.has(w))) {
       score++;
       updateScore();
-      showMessage(`Correct, ${group.category}`);
       visibleGroups.splice(i, 1);
       if (currentGroupIndex < allGroups.length) {
         visibleGroups.push(allGroups[currentGroupIndex++]);
       }
       clearSelection();
       renderBoard();
+      showMessage(`Correct, ${group.category}`);
       return;
     }
   }
