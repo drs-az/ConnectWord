@@ -4001,9 +4001,11 @@ const levels = [
   }
 ];
 
-let levelIndex = 0;
 let selected = [];
-let solvedCategories = new Set();
+let allGroups = [];
+let visibleGroups = [];
+let currentGroupIndex = 0;
+let score = 0;
 
 function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -4012,14 +4014,12 @@ function shuffle(array) {
   }
 }
 
-function renderLevel() {
+function renderBoard() {
   selected = [];
-  solvedCategories.clear();
   const grid = document.getElementById('word-grid');
   grid.innerHTML = '';
 
-  const level = levels[levelIndex];
-  const words = level.groups.flatMap(g => g.words);
+  const words = visibleGroups.flatMap(g => g.words);
   shuffle(words);
 
   for (const word of words) {
@@ -4033,7 +4033,6 @@ function renderLevel() {
 }
 
 function selectWord(btn) {
-  if (btn.classList.contains('solved')) return;
   const word = btn.textContent;
 
   if (btn.classList.contains('selected')) {
@@ -4047,20 +4046,23 @@ function selectWord(btn) {
 }
 
 function checkSelection() {
-  const level = levels[levelIndex];
-  const groupSize = level.groups[0].words.length;
+  if (visibleGroups.length === 0) return;
+  const groupSize = visibleGroups[0].words.length;
   if (selected.length !== groupSize) return;
 
   const selectionSet = new Set(selected);
-  for (const group of level.groups) {
-    if (!solvedCategories.has(group.category) &&
-        group.words.every(w => selectionSet.has(w))) {
-      markSolved(group.words);
-      solvedCategories.add(group.category);
-      if (solvedCategories.size === level.groups.length) {
-        document.getElementById('next-level').style.display = 'block';
+  for (let i = 0; i < visibleGroups.length; i++) {
+    const group = visibleGroups[i];
+    if (group.words.every(w => selectionSet.has(w))) {
+      score++;
+      updateScore();
+      visibleGroups.splice(i, 1);
+      if (currentGroupIndex < allGroups.length) {
+        visibleGroups.push(allGroups[currentGroupIndex++]);
       }
       clearSelection();
+      renderBoard();
+      showMessage(`Correct, ${group.category}`);
       return;
     }
   }
@@ -4076,23 +4078,24 @@ function clearSelection() {
   selected = [];
 }
 
-function markSolved(words) {
-  const grid = document.getElementById('word-grid');
-  for (const btn of grid.children) {
-    if (words.includes(btn.textContent)) {
-      btn.classList.remove('selected');
-      btn.classList.add('solved');
-      btn.disabled = true;
-    }
-  }
+function updateScore() {
+  document.getElementById('score').textContent = `Score: ${score}`;
+}
+
+function showMessage(msg) {
+  document.getElementById('message').textContent = msg;
 }
 
 function init() {
-  document.getElementById('next-level').addEventListener('click', () => {
-    levelIndex = (levelIndex + 1) % levels.length;
-    renderLevel();
-  });
-  renderLevel();
+  allGroups = levels.flatMap(l => l.groups);
+  shuffle(allGroups);
+  visibleGroups = allGroups.slice(0, 4);
+  currentGroupIndex = 4;
+  document.getElementById('next-level').style.display = 'none';
+  score = 0;
+  updateScore();
+  showMessage('');
+  renderBoard();
 }
 
 window.addEventListener('DOMContentLoaded', init);
