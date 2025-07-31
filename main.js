@@ -4029,6 +4029,7 @@ function renderBoard() {
     btn.addEventListener('click', () => selectWord(btn));
     grid.appendChild(btn);
   }
+  document.getElementById('message').textContent = '';
   document.getElementById('next-level').style.display = 'none';
 }
 
