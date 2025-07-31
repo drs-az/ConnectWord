@@ -55,6 +55,7 @@ header {
   box-shadow: 0 1px 3px rgba(0,0,0,0.2);
   cursor: pointer;
   transition: background 0.3s;
+  min-height: 6em; /* about 5 lines */
 }
 
 .word-btn:hover {
