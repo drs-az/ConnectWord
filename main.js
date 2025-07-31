@@ -1,6 +1,206 @@
 const levels = [
   {
     groups: [
+      {category: 'Jazz Instruments', words: ["saxophone", "double bass", "trumpet"]},
+      {category: 'Types of Sculptures', words: ["bust", "relief", "statue"]},
+      {category: 'Famous Cathedrals', words: ["notre dame", "sagrada familia", "westminster abbey"]},
+      {category: 'Orchestra Sections', words: ["strings", "brass", "percussion"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Famous Ballets', words: ["swan lake", "giselle", "the nutcracker"]},
+      {category: 'Opera Terms', words: ["aria", "libretto", "recitative"]},
+      {category: 'Art Movements', words: ["cubism", "dadaism", "surrealism"]},
+      {category: 'Photography Genres', words: ["portrait", "landscape", "macro"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Film Genres', words: ["thriller", "romance", "documentary"]},
+      {category: 'Cinematography Terms', words: ["pan", "zoom", "dolly"]},
+      {category: 'Famous Directors', words: ["spielberg", "kubrick", "nolan"]},
+      {category: 'Movie Awards', words: ["oscar", "bafta", "cannes"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Screenwriting Terms', words: ["scene", "dialogue", "slug line"]},
+      {category: 'Literary Genres', words: ["drama", "satire", "tragedy"]},
+      {category: 'Poetry Forms', words: ["haiku", "sonnet", "villanelle"]},
+      {category: 'Famous Book Series', words: ["dune", "outlander", "earthsea"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fantasy Tropes', words: ["chosen one", "magical artifact", "prophecy"]},
+      {category: 'Science Fiction Themes', words: ["time travel", "dystopia", "cyborg"]},
+      {category: 'Character Archetypes', words: ["mentor", "trickster", "hero"]},
+      {category: 'Fictional Governments', words: ["panem", "gilead", "the federation"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fantasy Creatures', words: ["gryphon", "basilisk", "kelpie"]},
+      {category: 'Magic Systems', words: ["elemental", "rune-based", "blood magic"]},
+      {category: 'Swords in Fiction', words: ["excalibur", "sting", "longclaw"]},
+      {category: 'Fantasy Races', words: ["elf", "orc", "dwarf"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Languages', words: ["klingon", "dothraki", "elvish"]},
+      {category: 'Fictional Schools', words: ["hogwarts", "camp half-blood", "scholomance"]},
+      {category: 'Book Awards', words: ["pulitzer", "man booker", "hugo"]},
+      {category: 'Fictional Kingdoms', words: ["ravka", "prythian", "illea"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Dark Academia Aesthetics', words: ["tweed", "candlelight", "latin"]},
+      {category: 'Types of Magic Users', words: ["witch", "sorcerer", "warlock"]},
+      {category: 'Famous Witches', words: ["morgana", "circe", "baba yaga"]},
+      {category: 'Witchcraft Tools', words: ["wand", "athame", "cauldron"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Tarot Cards (Major Arcana)', words: ["the fool", "the lovers", "death"]},
+      {category: 'Astrological Signs', words: ["leo", "scorpio", "aquarius"]},
+      {category: 'Astrology Houses', words: ["first house", "seventh house", "tenth house"]},
+      {category: 'Crystals and Stones', words: ["amethyst", "obsidian", "citrine"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Chakras', words: ["root", "throat", "third eye"]},
+      {category: 'Yoga Styles', words: ["hatha", "vinyasa", "kundalini"]},
+      {category: 'Meditation Types', words: ["mantra", "loving-kindness", "body scan"]},
+      {category: 'Breathing Techniques', words: ["box breathing", "alternate nostril", "4-7-8"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Manifestation Practices', words: ["scripting", "vision board", "affirmations"]},
+      {category: 'New Age Concepts', words: ["aura", "akashic records", "third eye"]},
+      {category: 'Mythical Love Stories', words: ["orpheus & eurydice", "tristan & isolde", "eros & psyche"]},
+      {category: 'Mythological Tricksters', words: ["loki", "maui", "anansi"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Mythical Realms', words: ["asgard", "elysium", "avalon"]},
+      {category: 'Greek Heroes', words: ["heracles", "perseus", "achilles"]},
+      {category: 'Greek Monsters', words: ["chimera", "hydra", "minotaur"]},
+      {category: 'Underworld Figures', words: ["hades", "charon", "cerberus"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Roman Gods', words: ["mars", "venus", "mercury"]},
+      {category: 'Norse Deities', words: ["odin", "freyja", "thor"]},
+      {category: 'Egyptian Gods', words: ["ra", "isis", "anubis"]},
+      {category: 'Celtic Deities', words: ["brigid", "cernunnos", "lugh"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Hindu Deities', words: ["shiva", "lakshmi", "ganesha"]},
+      {category: 'Religious Texts', words: ["torah", "quran", "bhagavad gita"]},
+      {category: 'Biblical Books', words: ["genesis", "psalms", "revelation"]},
+      {category: 'Christian Denominations', words: ["catholic", "orthodox", "protestant"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Pilgrimage Sites', words: ["mecca", "lourdes", "bodh gaya"]},
+      {category: 'Sacred Architecture', words: ["pagoda", "cathedral", "mosque"]},
+      {category: 'Monastic Orders', words: ["benedictine", "jesuit", "trappist"]},
+      {category: 'Spiritual Leaders', words: ["dalai lama", "pope", "imam"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Peace Prizes', words: ["nobel", "ramon magsaysay", "templeton"]},
+      {category: 'Human Rights Org', words: ["amnesty", "hrw", "unhcr"]},
+      {category: 'Diplomatic Ranks', words: ["ambassador", "consul", "attach\u00e9"]},
+      {category: 'International Treaties', words: ["geneva", "kyoto", "paris"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Wars', words: ["clone wars", "the rebellion", "valkyrie uprising"]},
+      {category: 'Dystopian Books', words: ["1984", "brave new world", "scythe"]},
+      {category: 'Apocalyptic Fiction', words: ["the road", "station eleven", "swan song"]},
+      {category: 'Cyberpunk Novels', words: ["neuromancer", "snow crash", "altered carbon"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Classic Sci-Fi', words: ["foundation", "the time machine", "fahrenheit 451"]},
+      {category: 'Alternate History Novels', words: ["man in the high castle", "11/22/63", "fatherland"]},
+      {category: 'Books with Maps', words: ["lord of the rings", "wings of fire", "red queen"]},
+      {category: 'Fictional Maps', words: ["middle-earth", "erilea", "westeros"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fantasy Weapons', words: ["valyrian steel", "truth-teller", "shardblade"]},
+      {category: 'Dragon Types', words: ["wyvern", "drake", "hydra"]},
+      {category: 'Fictional Bookstores', words: ["flourish & blotts", "the last bookstore", "mr. penumbra\u2019s"]},
+      {category: 'Fictional Royal Families', words: ["velaris court", "house targaryen", "house galathynius"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Romantic Tropes', words: ["enemies to lovers", "second chance", "fake dating"]},
+      {category: 'YA Dystopian Titles', words: ["divergent", "matched", "legend"]},
+      {category: 'Epic Fantasy Titles', words: ["wheel of time", "stormlight archive", "malazan"]},
+      {category: 'BookTok Favorites', words: ["verity", "icebreaker", "a court of thorns and roses"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Contemporary Romance Authors', words: ["emily henry", "colleen hoover", "christina lauren"]},
+      {category: 'Historical Romance Authors', words: ["julia quinn", "lisa kleypas", "tessa dare"]},
+      {category: 'Romantic Suspense Authors', words: ["karen rose", "jayne ann krentz", "rebecca zanetti"]},
+      {category: 'Fantasy Maps by Author', words: ["sarah j maas", "tolkien", "brandon sanderson"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Book Adaptations', words: ["shadow and bone", "throne of glass", "red queen"]},
+      {category: 'Dragon Books', words: ["fourth wing", "eragon", "fireborne"]},
+      {category: 'Fantasy Schools', words: ["basgiath", "unseen university", "the scholomance"]},
+      {category: 'Grumpy-Sunshine Pairings', words: ["rowan & aelin", "aaron & catalina", "xaden & violet"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Fictional Soldiers', words: ["dane", "cassian", "azriel"]},
+      {category: 'Fictional Healing Powers', words: ["syphon", "healer\u2019s touch", "elain\u2019s sight"]},
+      {category: 'Fictional Spymasters', words: ["rhysand", "azriel", "helion"]},
+      {category: 'Magical Animals', words: ["phoenix", "thestral", "nightmare"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Rebellious Heroines', words: ["celaena", "violet", "tess"]},
+      {category: 'Fictional Elites', words: ["illegitimate heirs", "royal guards", "heir apparent"]},
+      {category: 'Forbidden Love Stories', words: ["juliette & warner", "rhys & feyre", "violet & xaden"]},
+      {category: 'Fantasy Trials', words: ["gauntlet", "rite of passage", "trial by combat"]}
+    ]
+  },
+  {
+    groups: [
+      {category: 'Book Boyfriends', words: ["hunt athalar", "xaden riorson", "rowan whitethorn"]},
+      {category: 'Slow Burn Romances', words: ["crescent city", "kingdom of ash", "iron flame"]},
+      {category: 'Healer Characters', words: ["elain", "poppy", "nessa"]},
+      {category: 'Found Family Themes', words: ["acotar", "six of crows", "crescent city"]}
+    ]
+  },
+  {
+    groups: [
       {category: 'Famous Mountains', words: ["everest", "fuji", "kilimanjaro"]},
       {category: 'World Capitals (Europe)', words: ["paris", "rome", "vienna"]},
       {category: 'World Capitals (Asia)', words: ["tokyo", "bangkok", "jakarta"]},
