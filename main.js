@@ -1508,6 +1508,7 @@ function useHint() {
   if (selected.length === 0) return;
   const grid = document.getElementById('word-grid');
   grid.querySelectorAll('.hinted').forEach(b => b.classList.remove('hinted'));
+
   for (const group of visibleGroups) {
     if (selected.every(w => group.words.includes(w)) && selected.length < group.words.length) {
       const nextWord = group.words.find(w => !selected.includes(w));
