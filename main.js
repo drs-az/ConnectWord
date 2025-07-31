@@ -1490,8 +1490,8 @@ function showMessage(msg) {
 function init() {
   allGroups = levels.flatMap(l => l.groups);
   shuffle(allGroups);
-  visibleGroups = allGroups.slice(0, 4);
-  currentGroupIndex = 4;
+  visibleGroups = allGroups.slice(0, 7);
+  currentGroupIndex = 7;
   document.getElementById('next-level').style.display = 'none';
   score = 0;
   updateScore();
