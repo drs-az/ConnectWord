@@ -11,44 +11,32 @@ header {
   padding: 1em;
 }
 
-#word-board {
-  margin-top: 1em;
+#word-grid {
+  margin: 1em auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 0.5em;
+  max-width: 600px;
 }
 
-.word {
-  display: flex;
-  justify-content: center;
-  margin: 0.2em;
-}
-
-.letter-slot {
-  border-bottom: 2px solid #666;
-  width: 1em;
-  margin: 0 0.1em;
-}
-
-.found {
-  border-bottom-color: green;
-}
-
-#letter-wheel {
-  margin: 1em;
-}
-
-.letter-button {
-  display: inline-block;
-  margin: 0.3em;
-  padding: 0.5em 0.7em;
-  font-size: 1.2em;
-  border: 2px solid #3f51b5;
-  border-radius: 50%;
-  width: 2em;
-  height: 2em;
-  line-height: 2em;
+.word-btn {
+  padding: 0.5em;
+  border: 1px solid #3f51b5;
+  border-radius: 4px;
+  background: #f5f5f5;
   cursor: pointer;
 }
 
-#current-word {
-  margin-top: 1em;
-  min-height: 1.5em;
+.word-btn.selected {
+  background: #cfe2ff;
+}
+
+.word-btn.solved {
+  background: #c8e6c9;
+  cursor: default;
+}
+
+#next-level {
+  margin: 1em;
+  padding: 0.5em 1em;
 }

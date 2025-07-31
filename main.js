@@ -1,100 +1,111 @@
 const levels = [
   {
-    letters: ['C', 'A', 'T'],
-    words: ['cat', 'act', 'at']
+    groups: [
+      {category: 'Animals', words: ['lion', 'tiger', 'bear']},
+      {category: 'Colors', words: ['red', 'blue', 'green']},
+      {category: 'Fruits', words: ['apple', 'banana', 'pear']},
+      {category: 'Planets', words: ['mars', 'venus', 'saturn']}
+    ]
   },
   {
-    letters: ['D', 'O', 'G'],
-    words: ['dog', 'god', 'go', 'do']
-  },
-  {
-    letters: ['H', 'A', 'N', 'D'],
-    words: ['hand', 'and', 'had', 'dan', 'dna', 'an', 'ad', 'ha']
+    groups: [
+      {category: 'Shapes', words: ['circle', 'square', 'triangle']},
+      {category: 'Seasons', words: ['spring', 'summer', 'winter']},
+      {category: 'Instruments', words: ['guitar', 'piano', 'drums']},
+      {category: 'Sports', words: ['soccer', 'tennis', 'golf']}
+    ]
   }
 ];
 
-let levelIndex = 0;
-let currentWord = '';
-let found = new Set();
+let levelIndex
+let selected = [];
+let solvedCategories = new Set();
 
-function shuffleArray(arr) {
-  for (let i = arr.length - 1; i > 0; i--) {
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-    [arr[i], arr[j]] = [arr[j], arr[i]];
+    [array[i], array[j]] = [array[j], array[i]];
   }
 }
 
 function renderLevel() {
-  const level = levels[levelIndex];
-  found.clear();
-  currentWord = '';
-  const board = document.getElementById('word-board');
-  board.innerHTML = '';
-  level.words.forEach(w => {
-    const wordDiv = document.createElement('div');
-    wordDiv.className = 'word';
-    for (let i = 0; i < w.length; i++) {
-      const slot = document.createElement('div');
-      slot.className = 'letter-slot';
-      slot.textContent = '\u00A0';
-      wordDiv.appendChild(slot);
-    }
-    board.appendChild(wordDiv);
-  });
+  selected = [];
+  solvedCategories.clear();
+  const grid = document.getElementById('word-grid');
+  grid.innerHTML = '';
 
-  const wheel = document.getElementById('letter-wheel');
-  wheel.innerHTML = '';
-  level.letters.forEach((letter, idx) => {
-    const btn = document.createElement('div');
-    btn.className = 'letter-button';
-    btn.textContent = letter;
-    btn.addEventListener('click', () => {
-      currentWord += letter.toLowerCase();
-      document.getElementById('current-word').textContent = currentWord;
-    });
-    wheel.appendChild(btn);
-  });
-  document.getElementById('current-word').textContent = '';
-}
-
-function submitWord() {
   const level = levels[levelIndex];
-  if (level.words.includes(currentWord) && !found.has(currentWord)) {
-    found.add(currentWord);
-    revealWord(currentWord);
-    if (found.size === level.words.length) {
-      levelIndex = (levelIndex + 1) % levels.length;
-      alert('Great job! Moving to next level.');
-      renderLevel();
-    }
+  const words = level.groups.flatMap(g => g.words);
+  shuffle(words);
+
+  for (const word of words) {
+    const btn = document.createElement('button');
+    btn.className = 'word-btn';
+    btn.textContent = word;
+    btn.addEventListener('click', () => selectWord(btn));
+    grid.appendChild(btn);
   }
-  currentWord = '';
-  document.getElementById('current-word').textContent = '';
+  document.getElementById('next-level').style.display = 'none';
 }
 
-function revealWord(word) {
-  const board = document.getElementById('word-board');
-  for (const wordDiv of board.children) {
-    if (wordDiv.children.length === word.length) {
-      const guess = Array.from(wordDiv.children).map(c => c.textContent.toLowerCase()).join('');
-      if (!guess.trim()) {
-        for (let i = 0; i < word.length; i++) {
-          wordDiv.children[i].textContent = word[i];
-          wordDiv.children[i].classList.add('found');
-        }
-        return;
+function selectWord(btn) {
+  if (btn.classList.contains('solved')) return;
+  const word = btn.textContent;
+
+  if (btn.classList.contains('selected')) {
+    btn.classList.remove('selected');
+    selected = selected.filter(w => w !== word);
+  } else {
+    btn.classList.add('selected');
+    selected.push(word);
+    checkSelection();
+  }
+}
+
+function checkSelection() {
+  const level = levels[levelIndex];
+  const groupSize = level.groups[0].words.length;
+  if (selected.length !== groupSize) return;
+
+  const selectionSet = new Set(selected);
+  for (const group of level.groups) {
+    if (!solvedCategories.has(group.category) &&
+        group.words.every(w => selectionSet.has(w))) {
+      markSolved(group.words);
+      solvedCategories.add(group.category);
+      if (solvedCategories.size === level.groups.length) {
+        document.getElementById('next-level').style.display = 'block';
       }
+      clearSelection();
+      return;
+    }
+  }
+  // incorrect selection
+  clearSelection();
+}
+
+function clearSelection() {
+  const grid = document.getElementById('word-grid');
+  for (const btn of grid.querySelectorAll('.selected')) {
+    btn.classList.remove('selected');
+  }
+  selected = [];
+}
+
+function markSolved(words) {
+  const grid = document.getElementById('word-grid');
+  for (const btn of grid.children) {
+    if (words.includes(btn.textContent)) {
+      btn.classList.remove('selected');
+      btn.classList.add('solved');
+      btn.disabled = true;
     }
   }
 }
 
-function shuffleLetters() {
-  const level = levels[levelIndex];
-  shuffleArray(level.letters);
+document.getElementById('next-level').addEventListener('click', () => {
+  levelIndex = (levelIndex + 1) % levels.length;
   renderLevel();
-}
-
-document.getElementById('submit').addEventListener('click', submitWord);
-document.getElementById('shuffle').addEventListener('click', shuffleLetters);
+});
 
 renderLevel();
