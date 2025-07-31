@@ -1493,10 +1493,28 @@ function init() {
   visibleGroups = allGroups.slice(0, 7);
   currentGroupIndex = 7;
   document.getElementById('next-level').style.display = 'none';
+  document.getElementById('hint-button').addEventListener('click', useHint);
   score = 0;
   updateScore();
   showMessage('');
   renderBoard();
+}
+
+function useHint() {
+  if (selected.length === 0) return;
+  const grid = document.getElementById('word-grid');
+  for (const group of visibleGroups) {
+    if (selected.every(w => group.words.includes(w)) && selected.length < group.words.length) {
+      const nextWord = group.words.find(w => !selected.includes(w));
+      const btn = Array.from(grid.children).find(b => b.textContent === nextWord);
+      if (btn && !btn.classList.contains('selected')) {
+        btn.classList.add('selected');
+        selected.push(nextWord);
+        checkSelection();
+      }
+      break;
+    }
+  }
 }
 
 window.addEventListener('DOMContentLoaded', init);
