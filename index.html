@@ -1,1 +1,30 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ConnectWord</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>ConnectWord</h1>
+  </header>
+  <main id="game">
+    <div id="word-board"></div>
+    <div id="letter-wheel"></div>
+    <div id="controls">
+      <button id="shuffle">Shuffle</button>
+      <button id="submit">Submit</button>
+      <div id="current-word"></div>
+    </div>
+  </main>
+  <script src="main.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('serviceWorker.js');
+    }
+  </script>
+</body>
+</html>
