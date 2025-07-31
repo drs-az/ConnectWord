@@ -1,0 +1,9 @@
+{
+  "name": "ConnectWord",
+  "short_name": "ConnectWord",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "description": "A simple ad-free word puzzle game.",
+  "icons": []
+}

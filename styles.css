@@ -1,0 +1,42 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #3f51b5;
+  color: white;
+  padding: 1em;
+}
+
+#word-grid {
+  margin: 1em auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 0.5em;
+  max-width: 600px;
+}
+
+.word-btn {
+  padding: 0.5em;
+  border: 1px solid #3f51b5;
+  border-radius: 4px;
+  background: #f5f5f5;
+  cursor: pointer;
+}
+
+.word-btn.selected {
+  background: #cfe2ff;
+}
+
+.word-btn.solved {
+  background: #c8e6c9;
+  cursor: default;
+}
+
+#next-level {
+  margin: 1em;
+  padding: 0.5em 1em;
+}
