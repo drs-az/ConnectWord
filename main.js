@@ -17,7 +17,7 @@ const levels = [
   }
 ];
 
-let levelIndex = 0;
+let levelIndex
 let selected = [];
 let solvedCategories = new Set();
 
