@@ -1515,6 +1515,9 @@ function useHint() {
       const btn = Array.from(grid.children).find(b => b.textContent === nextWord);
       if (btn && !btn.classList.contains('selected')) {
         btn.classList.add('hinted');
+        score--;
+        updateScore();
+        showMessage('Hint used: -1 point');
       }
       break;
     }
